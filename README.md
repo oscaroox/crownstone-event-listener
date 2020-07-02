@@ -1,4 +1,4 @@
-# Crownstone Lambda
+# Crownstone event listener
 
 > Express application for routing Crownstone events to Google Assistant.
 
