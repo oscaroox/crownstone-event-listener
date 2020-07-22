@@ -1,34 +1,64 @@
-## Event Server
+# Crownstone event listener
 
+> Express application for routing Crownstone events to Google Assistant.
 
-## setup 
-```bash
+## Table of Contents (Optional)
+
+-   [Installation](#installation)
+-   [Features](#features)
+-   [Documenation](#documentation)
+-   [Copyrights](#copyrights)
+
+---
+
+## Installation
+
+First clone this repository and install the npm packages by running
+
+```shell
+$ yarn install
+```
+
+or
+
+```shell
 npm install
 ```
 
+Copy the contents of the example.env file and create a new file called ".env" in the root of the project. You should also need a Google service key key. Follow the steps in the [crownstone-lambda](https://github.com/oscaroox/crownstone-lambda#installation) repository. The service key should be called "google_service_key.json" and placed in the private folder.
 
-### Env file
+You can now run the application by running the command
 
-Before starting the app create a .env file and copy the contents of the example.env into it.
-The example.env file contains environment variables that are unique for each developer. you should change these with your keys/values.
+```shell
+$ yarn dev
+```
 
+or
 
-### Adding new users to event server
+```shell
+$ npm run dev
+```
 
-When a new user uses the crownstone for the first time, the lambda function will need to send the userid and accessToken to this server.
-Once we get this information we can store the user in our database and start listening for events for that user.
-Before the lambda function can call this server, we must assign it a valid JWT token. this can be done by running the `npm run generate:token` command in the root of this project.
+---
 
+## Features
 
-### Handling Events
-[TODO]
+This project supports the following features:
 
-### database
-[TOOO]
+-   Adding users to the event server
+-   Removing users from the event server
+-   Handles the switchstate update, ability change and crownstone created/deleted event.
 
-### Project structure
-[TODO]
+## Documentation
 
+---
 
-### Deploying to production
-[TODO]
+## Copyrights
+
+Copyrights belong to Crownstone and are provided under a noncontagious open-source license:
+
+    Authors: Oscar Druiventak
+    Creation date: 28 Jun, 2020
+    Licensed: MIT
+    Crownstone: https://crownstone.rocks
+    Stationsplein 45 d1.118, 3013 AK Rotterdam, The Netherlands

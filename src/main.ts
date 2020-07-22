@@ -1,10 +1,9 @@
-import { User } from './database/schemas/User';
 import express from 'express';
 import { config } from './config';
 import * as db from './database/db';
 import { UserRouter } from './routes/user.route';
 import { authorize } from './middlewares/authorize.middleware';
-import { initializeListeners, addListener } from './listeners';
+import { initializeListeners } from './listeners';
 const app = express();
 
 export async function main() {
